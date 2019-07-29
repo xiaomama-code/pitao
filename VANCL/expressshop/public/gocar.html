@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/gocar.css" />
+</head>
+<body>
+	<!--header-->
+	<div id="head">
+		<div id="headTopright">	
+			<a style="float: left;position: absolute;top:11px;"><img src="img/vancl-logo.png"</a>
+			<a class="weibo" href="#"><img src="img/w2.jpg"/></a>
+			<a class="weixin"href="#">
+				<img src="img/w1.jpg"/>
+				<b class="ss"></b>
+			</a>
+			<a class="notice"href="#">网站公告</a>
+			<a class="oImg"href="#"><img src="img/notice.png"/></a>
+			<a href="#">我的订单</a>
+			<a class="sign" href="logon.html">注册</a>
+			<!--<span>|</span>-->
+			<a class="sign"href="sign_in.html">登录</a>
+			<a class="welcom"href="#">你好，<span>欢迎光临凡客诚品！</span></a>
+		</div>		
+	</div>
+	<!--订单详情-->
+	<div id="information">
+		<div id="location">
+			<span  id="em">1.我的购物车</span>
+			<span>2.填写核对信息订单</span>
+			<span>3.成功提交订单</span>
+	    </div>
+	</div>
+<!--content-->
+<div id="content">
+	<div id="cart">
+		<div id="car_top"><h2>我的购物车</h2></div>
+		<div id="tip"><span style="color: #a10000;">温馨提示：</span>温馨提示：1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。</div>
+	</div>
+	<div id="car_prouct" style="margin-top: 10px;">
+		<div id="Allthing">
+			<table cellspacing="0" style="border:1px solid #C8C8C8;">
+				<thead>
+					<tr>
+						<th class="title">&nbsp;</th>
+						<th class="all_elec">
+							<input type="checkbox" id="all" style="width:13px;height:13px;margin-right:10px;"/>
+							<label for="all">全选</label>
+						</th>
+						<th class="image" style="width:50px;"></th>
+						<th class="name"  style="width:320px;">商品名称</th>
+						<th class="size" style="width:80px;">尺寸</th>
+						<th style="display: none;">积分</th>
+						<th class="price" style="width:80px;">单价</th>
+						<th class="num" style="width:100px;">数量</th>
+						<th class="discount"style="width:57px;">优惠</th>
+						<th class="total" style="width:107px;">小计</th>
+						<th class="operate" style="width:78px;">操作</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="product_show">
+						<td class="kb ones"></td>
+						<td class="kb bar" rowspan="1" colspan="6"></td>
+						<td class="kb" style="width:57px"></td>
+						<td class="kb" style="width:103px"></td>
+						<td class="kb" style="width:78px"></td>
+						<td class="kb"></td>
+					</tr>
+					<tr id="product_tital">
+						<td class="prev">&nbsp;</td>
+						<td ><input type="checkbox" id="all" style="width：13px;height: 13px; padding-left: 30px; text-align: left;"></td>
+						<td class="pic"><a style="cursor: pointer;vertical-align:middle;"><img src="img/mini.jpg" style="border: 1px solid #C8C8C8;vertical-align: middle;"></a></td>
+						<td class="name" ><a target="_blank" style="cursor: pointer;font-size:12px;">T恤 简鱼 千钧一发 黑色</a></td>
+						<td><a>L</a></td>
+						<td class="price">￥58.00</td>
+						<td>
+							<button class="butn"><span>-</span></button>
+				            <span class="goods-num">0</span>
+				            <button><span>+</span></button>
+						</td>
+						<td>-</td>
+						<td class="single_price">0</td>
+						<td class="del"><a style="font-size: 12px;">删除</a></td>
+						<td></td>
+					</tr>	
+				</tbody>
+				<tbody>
+					<tr>
+						<td></td>
+						<td colspan="9"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="empt"></div>
+			<div id="goods-total">
+				<div id="bar">
+					<input type="checkbox" id="all_ck" style="width: 13px;height: 13px;margin-right: 10px; vertical-align: middle;"/>
+					<label for="all_ck">全选</label>
+					<a id="all_del" style="margin-left: 20px;">
+					    删除
+					</a>
+					<span style="padding-left: 42px;">数量总计：<em style="color: #a10000" id="Goostatal">0</em>件</span>
+				</div>
+				<div class="summary">产品金额总计(不含运费):<span>￥<em id="pricrTatal">0.00</em></span></div>
+				<div class="btn-go">
+					<a class="go-buy" href="#"><<继续购买</a>
+					<a class="go-pay" href="#">去结算>></a>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+<script>
+
+  $(function(){
+  	//计算购物车里商品总数的方法
+  	let goodsNum=0;
+  	let  goodsPrice=0;
+  	  for(let i=0;i<$(".goods-num").length;i++){
+  	  	goodsNum+=$(".goods-num").html();
+  	  }
+  	  $("#Goostatal").html(goodsNum);
+  	//计算购物车商品的总价格方法  
+  	  for(let j=0;j<$(".single_price").length;j++){
+  	  	  goodsPrice+=$(".single_price").html();
+  	  }
+  	   $("#pricrTatal").html( goodsPrice);
+  	   
+
+  	  $(".single_price").html($(".price").eq(0).html()*$(".goods-num").html())
+  	  
+  	  for(let i=0;i<$("button span").length;i++){
+  	  	if(i%2==0){
+  	  		  $(".goods-num+button span").click(function(){
+  	  	  $(".goods-num ").html()=$(".goods-num ").html()+1;
+  	  });
+  	}else{
+  		$(".butn").children(0).click(function(){
+  	  	if($(".goods-num ").html()>0)
+  	  	  $(".goods-num ").html()=$(".goods-num ").html()-1;
+  	  });
+  	}  
+  }
+  	  $(".del a").click(function(){
+  	  	  $("thead+tbody").remove()
+  	  })
+ });
+
+
+
+//	//添加货物
+//	goodsAdd(btn){
+//	 	let oGoodsNum=btn.previousElementSibling;
+//	 	oGoodsNum.innerHTML=Number(oGoodsNum.innerHTML)+1;
+//	//货物数量改变商品小计和底下的总计及费用都会改变
+//	//更改当前的小计
+//	 	let oGoodsSinglePrice=btn.parentNode.nextElementSibling.nextElementSibling.firstElementChild;
+//	//获取商品单价
+//	 	let oGoodsPrice=btn.parentNode.nextElementSibling.firstElementChild;
+//	 	oGoodsSinglePrice.innerHTML=this.getGoodsSinglePrice(oGoodsNum.innerHTML,oGoodsPrice.innerHTML);
+//	 	//货物数量改变商品小计和底下的总计及费用都会改变,重新调用计算改变后的商品总价和费用；
+//	 	this.getGoodsNumUpdate();
+//	 	this.getGoodsPriceUpdate();
+//	 }
+//	
+//	
+//	//货物减少
+//	goodsMin(btn){
+//		//获取商品数量
+//		let oGoodsNum=btn.nextElementSibling;  //获取下一个兄弟节点
+//		if(oGoodsNum.innerHTML>0){
+//	 	oGoodsNum.innerHTML=Number(oGoodsNum.innerHTML)-1;
+//	  //更改当前商品小计
+//	   let oGoodsSinglePrice = btn.parentNode.nextElementSibling.nextElementSibling.firstElementChild;
+//	   //获取商品单价
+//	   let oGoodsPrice = btn.parentNode.nextElementSibling.firstElementChild;
+//	  oGoodsSinglePrice.innerHTML = this.getGoodsSinglePrice(oGoodsNum.innerHTML,oGoodsPrice.innerHTML);
+//	  this.getGoodsNumUpdate();
+//	 	this.getGoodsPriceUpdate();
+//	}
+//}	
+//	//删除货物
+//	delGoods(btn){
+//		let delTr = btn.parentNode.parentNode;
+//		delTr.remove();
+//		this.getGoodsNumAndUpdate();
+//	 	this.getGoodsPriceAndUpdate();		
+//		}
+//	
+//	
+//	//事件绑定
+//	getEvent(){
+//		let oBtn=document.getElementsByTagName("button");
+//		let that=this;
+//		 for(let i=0;i<oBtn.length;i++){
+//		 	  if(i%2==0){
+//		 	  	oBtn[i].onclick=function(){
+//		 	  		 that.goodsMin(this);
+//		 	  	}
+//		 	  }else{
+//		 	  	oBtn[i].onclick=function(){
+//		 	  		 that.goodsAdd(this);
+//		 	}
+//		 }
+//	}
+//		 let oDelBtn = document.getElementsByTagName("input");
+//			for(let i=0; i<oDelBtn.length; i++){
+//				oDelBtn[i].onclick = function(){
+//					that.delGoods(this);
+//		}
+//	}
+//			let addbtn=document.getElementsByClassName("Add");
+//			for(let i=0;i<addbtn.length;i++){
+//				   addbtn[i].onclick=function(){
+//				   	that.goodAdds(this);
+//				   	that.getEvent();
+//				   	 that.getsx();
+//				   }
+//			}
+//	}
+//	  //添加物品
+//	    goodAdds(btn){
+//	    	let tab1=document.getElementById("tab1"); //获取上一个表格
+//	    	let tbody=tab1.firstElementChild;  //第一个表格的第一个元素节点
+//	    	let lasttr=tbody.lastElementChild;  //表格元素的最后一个tr
+//	    	let tr=document.createElement("tr");    //创建新的tr
+//	    	for(let i=0;i<=6;i++){
+//	    		 let td=document.createElement("td");  //循环创建6个td
+//	    		 tr.appendChild(td);  //把td都连接到tr上
+//	    	}
+//	   //新添加的一行单品的所有信息
+//	    //定义新单价
+//	        let prisesin=btn.parentNode.previousElementSibling //上一个节点
+//	     //定义新的商品名称
+//	        let  goodsnew=prisesin.previousElementSibling;
+//	        tr.children[0].setAttribute("class","num1");
+//	        tr.children[1].innerHTML=goodsnew.innerHTML;
+//	        tr.children[2].innerHTML="<button>"+"-"+"</button>"+" "+"<span class='goods-num'>"+ "0" +"</span>"+" "+"<button>"+"+"+"</button>";
+//	        tr.children[3].innerHTML=prisesin.innerHTML;
+//	        tr.children[4].innerHTML="小计："+"<span class='goods-single-price'>"+"0"+"</span>";
+//	        tr.children[5].innerHTML="操作："+"<input type='button' class='delet' value='删除' />";
+//	         tbody.insertBefore(tr,lasttr);
+//
+//	         // let ls = localStorage;
+//	         // ls.setItem("3","tr.innerHTML");
+//	         // let  date= ls.getItem("3");
+//	         // let  jsonDate=JSON.parse(date );
+//	         // for(let index  in jsonDate){
+//    	   //      console.log(jsonDate[index]);
+//        //      }
+//	    }
+//	    //序列
+//	    getsx(){
+//	    	let onenum=document.getElementsByClassName("num1");
+//	    	 for(let i=0;i<onenum.length;i++){
+//	    	 	  onenum[i].innerHTML=i+1;
+//	    	 }
+//	    }
+//}
+//	let car=new Car();
+//	car.getEvent();
+</script>

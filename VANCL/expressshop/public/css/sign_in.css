@@ -1,0 +1,366 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,select,td,th{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+#logo{
+	width:1200px;
+	height:48px;
+    margin: 10px auto 0;
+	border-bottom:solid 1px #3E3A39 ;
+	padding-bottom: 10px;
+}
+/*中间*/
+#center_head{
+	width: 1200px;
+	height:473px;
+    border-bottom: 1px solid #999;
+    margin: 50px auto 10px;
+   /* background:skyblue ;*/
+}
+#vancl_si{
+	width: 100%;
+    height: 25px;
+    position: relative;
+  /*  background: pink;*/
+}
+#vancl_si h3{
+	font-size: 22px;
+    color: #979797;
+    font-weight: bolder;
+    text-align: left;
+    height: 25px;
+    line-height: 25px;
+    float: right;
+    margin: 0 100px 0 0;
+    width: 400px;
+    position: relative;
+}
+
+#vancl_si span{
+	font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+#vancl_si span a{
+	color:darkred;
+}
+#login{
+	width: 400px;
+    border: 1px solid #D1D1D1;
+    background-color: #fff;
+    float: right;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    height:408px;
+}
+#lg_rag{
+	width: 401px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+#lg_rag li{
+	float:left;
+	width:200px;
+	height:35px;
+	text-align: center;
+	font-size: 14px;
+	color: #656565;
+	cursor: pointer;
+}
+#lg_rag li:first-child{
+	border-right: 1px solid #cbcbcb;
+    background: #b42025;
+    color: white;
+    font-weight: bolder;
+}
+/*用户名*/
+#use_name{
+	margin:28px 0 18px 20px ;
+	
+}
+#use_name label{
+	height: 45px;
+    line-height: 45px;
+    color: #acacac;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    z-index: 10;
+    font-size: 14px;
+    text-indent: 10px;
+    background: #fff;
+}
+#Username{
+	height: 45px;
+    line-height: 45px;
+    color: #656565;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+    z-index: 9;
+    border: 0 none;
+    font-size: 14px;
+}
+#use_name{
+	height: 45px;
+    width: 360px;
+    border: solid 1px #cbcbcb;
+    position: relative;
+    overflow: hidden;
+}
+/*密码*/
+#pwd{
+	margin: 0 20px 18px 20px;
+}
+#pwd label{
+	height: 45px;
+    line-height: 45px;
+    color: #acacac;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    z-index: 10;
+    font-size: 14px;
+    text-indent: 10px;
+    background: #fff;
+}
+#passWord{
+	height: 45px;
+    line-height: 45px;
+    color: #656565;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+    z-index: 9;
+    border: 0 none;
+    font-size: 14px;
+}
+#pwd{
+	height: 45px;
+    width: 360px;
+    border: solid 1px #cbcbcb;
+    position: relative;
+    overflow: hidden;
+}
+/*提交*/
+.btn{
+	width:360px;
+	margin: 0 auto;
+}
+
+#findPwd{
+	cursor:pointer ;
+	line-height: 30px;
+    display: inline;
+    color: #b42025;
+    font-size: 14px;
+    font-weight: bolder;
+    float: right;
+}
+#clear{
+	clear:both;
+}
+.btn .on{
+	cursor:pointer ;
+	width: 100%;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    background: #b42025;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+#glup{
+	width: 360px;
+    margin: 31px auto 0;
+  /*  background: pink;*/
+   border-top:1px double gainsboro;
+}
+#glup h2{
+	color: #a4a4a4;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding:20px 0 10px 20px ;
+}
+.picList .rag{
+	width: 33px;
+    height: 33px;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    background: url(../img/logos.jpg) no-repeat left center;
+}
+#weixin{
+	background-position: 0 0;
+}
+#xiaomi {
+	background-position: -147px  0;
+}
+#pay{
+	background-position: -48px 0;
+}
+#qq{
+	background-position: -189px 0;
+}
+#ll360{
+	background-position: -228px 0;
+}
+#wobo{
+	background-position: -93px 0;
+	width:36px;
+}
+
+/*content_right*/
+#Content_right{
+	width: 465px;
+    height:352px;
+    float: left;
+    position: relative;
+    top:19px;
+    left:115px;
+  /*  z-index: 30px;*/
+}
+#Content_right img{
+	display: block;
+}
+/*foot*/
+/*#bottom{
+	margin-top:-20px ;
+}*/
+#bottomTop{	
+	width: 100%;
+    height: auto;
+    margin:0 auto ;
+   /* border-top: 1px solid #3e3a39;*/
+    padding-bottom: 20px;
+}
+#company{
+	width: 1200px;
+    height: auto;
+    margin: 20px auto;
+}
+#company p{
+	font-size:12px ;
+	text-align: center;
+    line-height: 25px;
+    color: #3e3a39;
+    font-family: "Microsoft YaHei";
+}
+ .subBottom{
+ 	text-align: center;
+ 	width: 980px;
+ 	height:45px;
+    margin: 0px auto 25px;
+    text-align: center;
+    /*background: pink;*/
+ }
+ .subBottom .faiLogo{
+ 	margin: 0 14px;
+ 	height: 42px;
+    width: 113px;
+	background: url(../img/cx.png) no-repeat scroll ;
+	background-size:113px 42px ;
+    display: inline-block;
+    
+}
+.subBottom .cnga{
+	background: url(../img/xh.png) no-repeat scroll;
+	background-size:156px 45px ;
+    display: inline-block;
+    height: 45px;
+    width: 156px;
+}
+.subBottom .bzcenter{
+	margin: 0 14px;
+	background: url(../img/bz.png) no-repeat scroll ;
+	background-size:96px 42px ;
+    display: inline-block;
+    height: 42px;
+    width: 96px;
+}
+.subBottom .record{
+	background: url(../img/ban.png) no-repeat scroll  ;
+	background-size:101px 42px ;
+    display: inline-block;
+    height: 42px;
+    width: 101px;
+}
+.subBottom .fiveLogo{
+	background: url(../img/bot.png) no-repeat scroll  ;
+	  background-size:42px 42px ;
+    display: inline-block;
+    height: 42px;
+    width: 42px;
+    margin: 0 14px;
+  
+}
+.subBottom .cctv{
+	display: inline-block;
+	margin:0px 10px ;
+}
+.subBottom .cctv img{
+	display: block;
+	width:120px;
+	height:39px;
+	margin-top:0 ;
+}
+/*indormation*/
+.infor{
+	background: skyblue;
+	position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 10;
+    width: 73px;
+    height: 205px;
+    border: 1px solid #b81b22;
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+.infor ul li{
+	width: 73px;
+    border-bottom: 1px solid #b81b22;
+}
+.infor ul li a{
+    display: block;
+    width: 73px;
+}
+.infor ul li.APP a{
+	height:76px;
+	background:url(../img/pone.png)no-repeat scroll ;
+}
+.infor ul li.sever a{
+	height:71px;
+	background: url(../img/on.png)no-repeat scroll;
+}
+.infor ul li.top{
+	height:56px;
+	background: url(../img/top.png);
+}

@@ -1,0 +1,288 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,select,td,th{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+#head{
+	width:100%;
+	height:35px;
+	
+/*	background:skyblue;	*/
+}
+#headTopright{
+	position: relative;
+	width:980px;
+	height:50px;
+	line-height:50px;
+	/*background: #f7f7f7;*/
+	margin: 0 auto;
+	/*background:url(../img/vancl-logo.png) no-repeat scroll ;*/
+	border-bottom:1px solid black;
+}
+#headTopright a{
+	float:right;
+	color:black;
+	font-size: 12px;
+}
+#headTopright b{
+	display:none;
+	position: absolute;
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+	width: 148px;
+    height: 169px;
+    background:url(../img/weixin.png)no-repeat;
+    right:20px;
+    top:23px;
+    z-index: 500;
+}
+a:hover{
+	cursor:hand ;
+}
+ #headTopright .weixin:hover b{
+	display:block;
+}
+.weibo{
+	margin:4px 0  4px 3px;
+	
+}
+
+.weixin{
+	margin:4px 0px 4px 10px;
+	text-align: center;
+}
+.notice{
+	margin-left:12px;
+}
+.notice:hover{
+	color:darkred;
+}
+.oImg{
+	margin:4px 0 4px 14px ;
+}
+.sign{
+	margin: 0 14px;
+}
+#headTopright a:nth-child(5):hover{
+	color:darkred;
+}
+#headTopright a:nth-child(3):hover{
+	color:darkred;
+}
+/*location*/
+#information{
+	 width:980px;
+	 margin: 0 auto;
+}
+#location{
+    background-position: 0 0;
+    height: 28px;
+    width: 540px;
+    margin-top: 30px;
+  /*  background:skyblue ;*/
+}
+#location #em{
+	background: darkred;
+	color: white;
+	display: inline-block;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    width: 170px;
+}
+#location span{
+	background:#979797 ;
+	/*border-right:1px solid #979797 ;*/
+	color: white;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    width: 170px;
+}
+/*content*/
+#content{
+	width:980px;
+	height:443px;
+/*	background: deepskyblue;*/
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#cart_top{
+	height: 30px;
+    overflow: hidden;
+    padding-left: 45px;
+    width: 935px;
+	
+}
+#car_top h2{
+	font-size: 18px;
+    font-weight: bold;
+}
+#tip{ font-size: 12px;
+	margin-top: 6px;
+    color: #656565;
+    line-height: 20px;
+}
+table{
+	border-collapse: separate;
+	width:100%;
+	padding: 0;
+}
+#Allthing .title{
+	font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 15px;
+    border-left: 1px solid #DCDFE4;
+}
+#Allthing th{
+	font-size: 14px;
+	border-top: 1px solid #DCDFE4;
+    border-bottom: 1px solid #B7B7B7;
+    height: 37px;
+    text-align: center;
+    vertical-align: middle;
+    background: #e2e0e1;
+    font-style: normal;
+    font-weight: bold;
+}
+ .all_elec{
+	text-align: left;
+   width: 80px;
+    vertical-align: middle;
+}
+#product_show {
+	height:21px;
+}
+#product_show .ones{
+	font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 15px;
+  /*  border-left: 1px solid #DCDFE4;*/
+}
+#product_show .kb{
+	padding: 10px 0;
+	border-bottom: 1px solid #FFFFFF;
+	text-align: center;
+    vertical-align: middle;
+}
+#product_show .bar{
+	padding-left: 30px;
+    text-align: left;
+    width: 50px;
+}
+table td{
+	padding: 10px 0;
+	text-align: center;
+    vertical-align: middle;
+}
+#product_tital .prev{
+	height:50px;
+	font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 15px;
+  /*  border-left: 1px solid #DCDFE4;*/
+}
+table a{
+	cursor: pointer;
+}
+table a:hover{
+	color:darkred;
+}
+#product_tital .name{
+	padding-left: 10px;
+	text-align: left;
+}
+#empt:after{
+	content: " ";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+#empt{
+	float: inherit;
+    padding-bottom: 10px;
+    height: 1px;
+}
+#goods-total{
+	overflow: hidden;
+	font-size: 12px;
+	padding: 12px 10px 0px 0;
+    background: none repeat scroll 0 0 #FFFEF5;
+    border: 1px solid #EBE5BB;
+    line-height: 25px;
+    width: 968px;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+#goods-total  #bar{
+	width:913px;
+	height: 25px;
+    padding: 14px 42px 0 13px;
+    text-align: left;
+}
+#goods-total  #bar a:hover{
+	color:darkred;
+	cursor: pointer;
+}
+#goods-total  em{
+	color: #a10000;
+	font-style: normal;
+    font-weight: bold; 
+}
+.summary{
+	width: 210px;
+	height: 30px;
+	padding: 10px 10px 10px 13px;
+	float:left;
+}
+.summary span{
+	color: #a10000;
+	font-size: 24px;
+}
+.btn-go{
+	padding: 0 0 15px 0;
+    float: right;
+}
+.btn-go .go-buy{
+	display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #666;
+    height: 37px;
+    line-height: 37px;
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: center;
+    width: 122px;
+    background:gainsboro;
+    border-radius: 5px;
+}
+.btn-go .go-pay{
+	display: inline-block;
+    vertical-align: middle;
+	overflow: hidden;
+	color: #fff;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+    padding-left: 50px;
+    width: 110px;
+    background: #c30622;
+    font-size: 20px;
+    border-radius: 5px;
+}
